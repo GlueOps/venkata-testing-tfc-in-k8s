@@ -7,7 +7,7 @@ spec:
   organization: dev-venkata
   secretsMountPath: "/tmp/secrets"
   module:
-    source: "joatmon08/hello/random"
+    source: "github.com/koikonom/terraform-nullresource-example"
     version: "6.0.0"
   outputs:
     - key: pet
@@ -16,21 +16,12 @@ spec:
       moduleOutputName: list_of_pets
     - key: quoted_some_key
       moduleOutputName: quoted_some_key
-  variables:
-    - key: hellos
-      value: |
-        {
-          hello="world"
-          second_hello="universe"
-        }
-      hcl: true
-      sensitive: false
-      environmentVariable: false
-    - key: some_key
-      sensitive: false
-      value: '"something"'
-      environmentVariable: false
-    - key: CONFIRM_DESTROY
-      value: "1"
-      sensitive: false
-      environmentVariable: true
+   variables:
+     - key: CONFIRM_DESTROY
+       value: "1"
+       sensitive: false
+       environmentVariable: true
+   outputs:
+     - key: pet
+       moduleOutputName: rofl
+        environmentVariable: true
