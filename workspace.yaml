@@ -5,7 +5,6 @@ metadata:
   name: "random"
 spec:
   organization: dev-venkata
-  secretsMountPath: "/tmp/secrets"
   module:
     source: "joatmon08/hello/random"
     version: "6.0.0"
