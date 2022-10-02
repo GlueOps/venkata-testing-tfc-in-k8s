@@ -8,12 +8,12 @@ spec:
   secretsMountPath: "/tmp/secrets"
   module:
     source: "github.com/koikonom/terraform-nullresource-example"
-   variables:
-     - key: CONFIRM_DESTROY
-       value: "1"
-       sensitive: false
-       environmentVariable: true
-   outputs:
-     - key: pet
-       moduleOutputName: rofl
-        environmentVariable: true
+ variables:
+   - key: CONFIRM_DESTROY
+     value: "1"
+     sensitive: false
+     environmentVariable: true
+ outputs:
+   - key: pet
+     moduleOutputName: rofl
+      environmentVariable: true
