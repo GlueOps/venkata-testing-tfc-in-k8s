@@ -1,13 +1,12 @@
----
 apiVersion: app.terraform.io/v1alpha1
 kind: Workspace
 metadata:
-  name: "random"
+ name: demo
 spec:
-  organization: dev-venkata
-  secretsMountPath: "/tmp/secrets"
-  module:
-    source: "github.com/koikonom/terraform-nullresource-example"
+ organization: dev-venkata
+ secretsMountPath: "/tmp/secrets"
+ module:
+   source: "github.com/koikonom/terraform-nullresource-example"
  variables:
    - key: CONFIRM_DESTROY
      value: "1"
@@ -16,4 +15,3 @@ spec:
  outputs:
    - key: pet
      moduleOutputName: rofl
-      environmentVariable: true
