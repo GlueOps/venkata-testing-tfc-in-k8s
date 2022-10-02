@@ -8,14 +8,6 @@ spec:
   secretsMountPath: "/tmp/secrets"
   module:
     source: "github.com/koikonom/terraform-nullresource-example"
-    version: "6.0.0"
-  outputs:
-    - key: pet
-      moduleOutputName: pet
-    - key: list_of_pets
-      moduleOutputName: list_of_pets
-    - key: quoted_some_key
-      moduleOutputName: quoted_some_key
    variables:
      - key: CONFIRM_DESTROY
        value: "1"
