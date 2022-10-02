@@ -1,7 +1,7 @@
 apiVersion: app.terraform.io/v1alpha1
 kind: Workspace
 metadata:
-  name: greetings
+  name: greetings-test-1
 spec:
   organization: dev-venkata
   secretsMountPath: "/tmp/secrets"
