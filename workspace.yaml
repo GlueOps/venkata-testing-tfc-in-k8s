@@ -29,3 +29,7 @@ spec:
       sensitive: false
       value: '"something"'
       environmentVariable: false
+    - key: CONFIRM_DESTROY
+      value: "0"
+      sensitive: false
+      environmentVariable: true
