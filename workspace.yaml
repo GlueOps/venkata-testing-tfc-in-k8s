@@ -27,7 +27,7 @@ spec:
       environmentVariable: false
     - key: some_key
       sensitive: false
-      value: '"something"'
+      value: '"somethisng"'
       environmentVariable: false
     - key: CONFIRM_DESTROY
       value: "0"
