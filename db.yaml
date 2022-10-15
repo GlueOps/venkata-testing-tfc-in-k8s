@@ -27,7 +27,7 @@ spec:
       environmentVariable: false
     - key: instance
       value: |
-        instance = {
+       {
           zone = "b"
         }
       hcl: true
