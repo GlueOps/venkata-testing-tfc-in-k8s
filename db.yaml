@@ -13,7 +13,7 @@ spec:
       environmentVariable: true
     - key: TOGGLE_TO_RERUN
       sensitive: false
-      value: '"2"'
+      value: '"3"'
       environmentVariable: true
     - key: REGION
       sensitive: false
