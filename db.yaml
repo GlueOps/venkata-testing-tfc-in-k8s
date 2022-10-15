@@ -16,6 +16,6 @@ spec:
       environmentVariable: true
     - key: TOGGLE_TO_RETRY
       sensitive: false
-      value: '"1"'
+      value: '"0"'
       environmentVariable: false
 
