@@ -1,0 +1,35 @@
+apiVersion: app.terraform.io/v1alpha1
+kind: Workspace
+metadata:
+  name: "db-fun"
+spec:
+  organization: dev-venkata
+  secretsMountPath: "/tmp/secrets"
+  module:
+    source: "google-terraform-modules/cloudsql/google"
+    version: "1.13.0"
+  outputs:
+    - key: instance_sql_ipv4
+      moduleOutputName: instance_sql_ipv4
+    - key: instance_sql_ipv4_time_to_retire
+      moduleOutputName: instance_sql_ipv4_time_to_retire
+  variables:
+    - key: general
+      value: |
+          {
+              name       = "mydatabase"
+              env        = "dev"
+              region     = "us-central1"
+              db_version = "POSTGRES_14"
+            }
+      hcl: true
+      sensitive: false
+      environmentVariable: false
+    - key: instance
+      value: |
+        instance = {
+          zone = "b"
+        }
+      hcl: true
+      sensitive: false
+      environmentVariable: false
