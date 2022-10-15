@@ -6,8 +6,7 @@ spec:
   organization: dev-venkata
   secretsMountPath: "/tmp/secrets"
   module:
-    source: "google-terraform-modules/cloudsql/google"
-    version: "1.13"
+    source: "git::https://github.com/google-terraform-modules/terraform-google-cloudsql?ref=master"
   outputs:
     - key: instance_sql_ipv4
       moduleOutputName: instance_sql_ipv4
