@@ -8,7 +8,6 @@ spec:
   module:
     source: "git::https://github.com/GlueOps/terraform-gcp-cloud-sql.git"
   variables:
-      environmentVariable: true
     - key: GOOGLE_CREDENTIALS
       sensitive: true
       environmentVariable: true
