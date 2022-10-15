@@ -6,29 +6,5 @@ spec:
   organization: dev-venkata
   secretsMountPath: "/tmp/secrets"
   module:
-    source: "git::https://github.com/google-terraform-modules/terraform-google-cloudsql?ref=master"
-  outputs:
-    - key: instance_sql_ipv4
-      moduleOutputName: instance_sql_ipv4
-    - key: instance_sql_ipv4_time_to_retire
-      moduleOutputName: instance_sql_ipv4_time_to_retire
-  variables:
-    - key: general
-      value: |
-          {
-              name       = "mydatabase"
-              env        = "dev"
-              region     = "us-central1"
-              db_version = "POSTGRES_14"
-            }
-      hcl: true
-      sensitive: false
-      environmentVariable: false
-    - key: instance
-      value: |
-       {
-          zone = "b"
-        }
-      hcl: true
-      sensitive: false
-      environmentVariable: false
+    source: "GoogleCloudPlatform/sql-db/google//modules/postgresql"
+    version: "8.0.0"
