@@ -15,4 +15,19 @@ spec:
       sensitive: false
       value: '"2"'
       environmentVariable: true
-
+    - key: REGION
+      sensitive: false
+      value: ''
+      environmentVariable: false
+    - key: PROJECT_NAME
+      sensitive: false
+      value: "yolo1-apps-141715"
+      environmentVariable: false
+    - key: DB_CLUSTER_NAME
+      sensitive: false
+      value: "glueops-db"
+      environmentVariable: false
+    - key: REGION
+      sensitive: false
+      value: "us-central1"
+      environmentVariable: false
