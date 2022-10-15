@@ -14,8 +14,4 @@ spec:
     - key: GOOGLE_CREDENTIALS
       sensitive: true
       environmentVariable: true
-    - key: TOGGLE_TO_RETRY
-      sensitive: false
-      value: '"0"'
-      environmentVariable: false
 
