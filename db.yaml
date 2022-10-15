@@ -8,13 +8,13 @@ spec:
   module:
     source: "git::https://github.com/GlueOps/terraform-gcp-cloud-sql.git"
   outputs:
-    - key: random_priority
-      moduleOutputName: random_priority
+    - key: time_ran
+      moduleOutputName: time_ran
   variables:
     - key: GOOGLE_CREDENTIALS
       sensitive: true
       environmentVariable: true
-    - key: TOGGLE_TO_RETRY
+    - key: TOGGLE_TO_RERUN
       sensitive: false
       value: '"2"'
       environmentVariable: true
