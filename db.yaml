@@ -1,29 +1,29 @@
-# apiVersion: app.terraform.io/v1alpha1
-# kind: Workspace
-# metadata:
-#   name: "db-fun-1"
-# spec:
-#   organization: dev-venkata
-#   secretsMountPath: "/tmp/secrets"
-#   module:
-#     source: "git::https://github.com/GlueOps/terraform-gcp-cloud-sql.git"
-#   variables:
-#     - key: GOOGLE_CREDENTIALS
-#       sensitive: true
-#       environmentVariable: true
-#     - key: TOGGLE_TO_RERUN
-#       sensitive: false
-#       value: '"2"'
-#       environmentVariable: true
-#     - key: PROJECT_NAME
-#       sensitive: false
-#       value: "yolo1-apps-141715"
-#       environmentVariable: false
-#     - key: DB_CLUSTER_NAME
-#       sensitive: false
-#       value: "glueops-db"
-#       environmentVariable: false
-#     - key: REGION
-#       sensitive: false
-#       value: "us-central1"
-#       environmentVariable: false
+apiVersion: app.terraform.io/v1alpha1
+kind: Workspace
+metadata:
+  name: "db-fun-1"
+spec:
+  organization: dev-venkata
+  secretsMountPath: "/tmp/secrets"
+  module:
+    source: "git::https://github.com/GlueOps/terraform-gcp-cloud-sql.git"
+  variables:
+    - key: GOOGLE_CREDENTIALS
+      sensitive: true
+      environmentVariable: true
+    - key: TOGGLE_TO_RERUN
+      sensitive: false
+      value: '"2"'
+      environmentVariable: true
+    - key: PROJECT_NAME
+      sensitive: false
+      value: "yolo1-apps-141715"
+      environmentVariable: false
+    - key: DB_CLUSTER_NAME
+      sensitive: false
+      value: "glueops-db"
+      environmentVariable: false
+    - key: REGION
+      sensitive: false
+      value: "us-central1"
+      environmentVariable: false
