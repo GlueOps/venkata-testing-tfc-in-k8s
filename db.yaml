@@ -8,8 +8,8 @@ spec:
   module:
     source: "git::https://github.com/GlueOps/terraform-gcp-cloud-sql.git"
   outputs:
-    - key: TOGGLE_TO_RETRY
-      moduleOutputName: TOGGLE_TO_RETRY
+    - key: TOGGLED_SWITCH
+      moduleOutputName: TOGGLED_SWITCH
   variables:
     - key: GOOGLE_CREDENTIALS
       sensitive: true
