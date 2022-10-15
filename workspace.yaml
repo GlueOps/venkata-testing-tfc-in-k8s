@@ -29,7 +29,3 @@ spec:
       sensitive: false
       value: '"ssadsadasd"'
       environmentVariable: false
-    - key: CONFIRM_DESTROY
-      value: "0"
-      sensitive: false
-      environmentVariable: true
