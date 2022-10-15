@@ -7,6 +7,7 @@ spec:
   secretsMountPath: "/tmp/secrets"
   module:
     source: "google-terraform-modules/cloudsql/google"
+    version: "1.13"
   outputs:
     - key: instance_sql_ipv4
       moduleOutputName: instance_sql_ipv4
