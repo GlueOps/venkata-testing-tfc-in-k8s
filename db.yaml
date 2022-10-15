@@ -16,6 +16,6 @@ spec:
       environmentVariable: true
     - key: TOGGLE_TO_RERUN
       sensitive: false
-      value: '"asdasd3"'
+      value: '"asdasd"'
       environmentVariable: true
 
