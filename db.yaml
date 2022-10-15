@@ -7,6 +7,9 @@ spec:
   secretsMountPath: "/tmp/secrets"
   module:
     source: "git::https://github.com/GlueOps/terraform-gcp-cloud-sql.git"
+  outputs:
+    - key: TOGGLE_TO_RETRY
+      moduleOutputName: TOGGLE_TO_RETRY
   variables:
     - key: GOOGLE_CREDENTIALS
       sensitive: true
