@@ -16,6 +16,6 @@ spec:
       environmentVariable: true
     - key: TOGGLE_TO_RERUN
       sensitive: false
-      value: '"7"'
+      value: '"3"'
       environmentVariable: true
 
