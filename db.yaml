@@ -8,8 +8,8 @@ spec:
   module:
     source: "git::https://github.com/GlueOps/terraform-gcp-cloud-sql.git"
   outputs:
-    - key: TOGGLED_SWITCH
-      moduleOutputName: TOGGLED_SWITCH
+    - key: random_priority
+      moduleOutputName: random_priority
   variables:
     - key: GOOGLE_CREDENTIALS
       sensitive: true
