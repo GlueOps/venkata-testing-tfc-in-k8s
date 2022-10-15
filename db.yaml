@@ -13,6 +13,6 @@ spec:
       environmentVariable: true
     - key: TOGGLE_TO_RERUN
       sensitive: false
-      value: '"1asasdasdasdasds"'
+      value: '"1"'
       environmentVariable: true
 
