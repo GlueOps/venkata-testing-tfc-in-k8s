@@ -15,10 +15,6 @@ spec:
       sensitive: false
       value: '"3"'
       environmentVariable: true
-    - key: REGION
-      sensitive: false
-      value: ''
-      environmentVariable: false
     - key: PROJECT_NAME
       sensitive: false
       value: "yolo1-apps-141715"
