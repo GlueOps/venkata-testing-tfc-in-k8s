@@ -1,35 +1,92 @@
 apiVersion: app.terraform.io/v1alpha1
 kind: Workspace
 metadata:
-  name: "random"
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: >
+      {"apiVersion":"app.terraform.io/v1alpha1","kind":"Workspace","metadata":{"annotations":{},"labels":{"argocd.argoproj.io/instance":"venkata-tfc-1"},"name":"db-fun-1","namespace":"venkata-tfc-1"},"spec":{"module":{"source":"git::https://github.com/GlueOps/terraform-gcp-cloud-sql.git"},"organization":"dev-venkata","secretsMountPath":"/tmp/secrets","variables":[{"environmentVariable":true,"key":"GOOGLE_CREDENTIALS","sensitive":true}]}}
+  creationTimestamp: '2022-10-15T05:51:05Z'
+  finalizers:
+    - finalizer.workspace.app.terraform.io
+  generation: 19
+  labels:
+    argocd.argoproj.io/instance: venkata-tfc-1
+  managedFields:
+    - apiVersion: app.terraform.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:finalizers':
+            .: {}
+            'v:"finalizer.workspace.app.terraform.io"': {}
+        'f:spec':
+          'f:module':
+            'f:version': {}
+          'f:terraformVersion': {}
+          'f:vcs': {}
+      manager: terraform-k8s
+      operation: Update
+      time: '2022-10-15T06:58:06Z'
+    - apiVersion: app.terraform.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          'f:configVersionID': {}
+          'f:runID': {}
+          'f:runStatus': {}
+      manager: terraform-k8s
+      operation: Update
+      subresource: status
+      time: '2022-10-15T06:58:25Z'
+    - apiVersion: app.terraform.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations': {}
+          'f:labels':
+            .: {}
+            'f:argocd.argoproj.io/instance': {}
+        'f:spec':
+          .: {}
+          'f:module':
+            .: {}
+            'f:source': {}
+          'f:organization': {}
+          'f:outputs': {}
+          'f:secretsMountPath': {}
+          'f:variables': {}
+      manager: argocd-application-controller
+      operation: Update
+      time: '2022-10-15T06:59:13Z'
+    - apiVersion: app.terraform.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            'f:kubectl.kubernetes.io/last-applied-configuration': {}
+      manager: argocd-server
+      operation: Update
+      time: '2022-10-15T07:04:16Z'
+  name: db-fun-1
+  namespace: venkata-tfc-1
+  resourceVersion: '383804'
+  uid: 404e3859-3780-47d6-ba1e-450faea38a0b
 spec:
-  organization: dev-venkata
-  secretsMountPath: "/tmp/secrets"
   module:
-    source: "joatmon08/hello/random"
-    version: "5.0.0"
+    source: 'git::https://github.com/GlueOps/terraform-gcp-cloud-sql.git'
+    version: ''
+  organization: dev-venkata
   outputs:
-    - key: pet
-      moduleOutputName: pet
-    - key: list_of_pets
-      moduleOutputName: list_of_pets
-    - key: quoted_some_key
-      moduleOutputName: quoted_some_key
+    - key: TOGGLED_SWITCH
+      moduleOutputName: TOGGLED_SWITCH
+  secretsMountPath: /tmp/secrets
+  terraformVersion: ''
   variables:
-    - key: hellos
-      value: |
-        {
-          hello="world"
-          second_hello="universe"
-        }
-      hcl: true
-      sensitive: false
-      environmentVariable: false
-    - key: some_key
-      sensitive: false
-      value: '"ssadsadasd"'
-      environmentVariable: false
-    - key: CONFIRM_DESTROY
-      value: "1"
-      sensitive: false
-      environmentVariable: true      
+    - environmentVariable: true
+      key: GOOGLE_CREDENTIALS
+      sensitive: true
+  vcs: null
+status:
+  configVersionID: ''
+  runID: run-1ybuWmYnCmUfkcUP
+  runStatus: errored
+  workspaceID: ws-EQLUkD5d7nunngHd
