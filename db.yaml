@@ -7,9 +7,6 @@ spec:
   secretsMountPath: "/tmp/secrets"
   module:
     source: "git::https://github.com/GlueOps/terraform-gcp-cloud-sql.git"
-  outputs:
-    - key: TOGGLED_SWITCH
-      moduleOutputName: TOGGLED_SWITCH
   variables:
     - key: GOOGLE_CREDENTIALS
       sensitive: true
