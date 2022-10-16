@@ -17,7 +17,7 @@ spec:
       sensitive: false
       value: "https://vault.gcp.yolo1.glueops.rocks"
       environmentVariable: false
-    - key: TF_CLI_ARGS_plan
-      sensitive: false
-      value: "-target=module.operator.vaultoperator_init.default "
-      environmentVariable: true
+#     - key: TF_CLI_ARGS_plan
+#       sensitive: false
+#       value: "-target=module.operator.vaultoperator_init.default "
+#       environmentVariable: true
