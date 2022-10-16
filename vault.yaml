@@ -1,0 +1,19 @@
+
+apiVersion: app.terraform.io/v1alpha1
+kind: Workspace
+metadata:
+  name: "vault-init"
+spec:
+  organization: dev-venkata
+  secretsMountPath: "/tmp/secrets"
+  module:
+    source: "git::https://github.com/GlueOps/terraform-vault.git?ref=revert-4-revert-3-revert-2-revert-1-feat/auto-init-vault"
+  variables:
+    - key: TOGGLE_TO_RERUN
+      sensitive: false
+      value: '"1"'
+      environmentVariable: true
+    - key: VAULT_ADDR
+      sensitive: false
+      value: "https://vault.gcp.yolo1.glueops.rocks"
+      environmentVariable: false
