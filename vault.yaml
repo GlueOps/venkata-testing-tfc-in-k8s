@@ -19,5 +19,5 @@ spec:
       environmentVariable: false
     - key: TF_CLI_ARGS
       sensitive: false
-      value: "-target=vaultoperator_init.default"
+      value: "-target=module.vaultoperator_init.default"
       environmentVariable: true
