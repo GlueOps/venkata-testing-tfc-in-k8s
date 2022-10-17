@@ -3,7 +3,7 @@ kind: Workspace
 metadata:
   name: "db-fun-1"
 spec:
-  organization: dev-venkata
+#  organization: dev-venkata
   secretsMountPath: "/tmp/secrets"
   module:
     source: "git::https://github.com/GlueOps/terraform-gcp-cloud-sql.git"
