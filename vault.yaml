@@ -11,7 +11,7 @@ spec:
   variables:
     - key: TOGGLE_TO_RERUN
       sensitive: false
-      value: '"sss"'
+      value: '"1"'
       environmentVariable: true
     - key: VAULT_ADDR
       sensitive: false
