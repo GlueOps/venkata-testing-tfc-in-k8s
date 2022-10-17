@@ -13,7 +13,7 @@ spec:
       environmentVariable: true
     - key: TOGGLE_TO_RERUN
       sensitive: false
-      value: '"1"'
+      value: '"2"'
       environmentVariable: true
     - key: PROJECT_NAME
       sensitive: false
